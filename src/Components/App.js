@@ -6,6 +6,7 @@ import NotFound from "./NotFound";
 import ProductWraper from "./Routes/Products/ProductWraper";
 import Products from "./Routes/Products/Products";
 import ProductCreate from "./Routes/Products/ProductCreate";
+import Product from "./Routes/Products/Product";
 
 export default class App extends React.Component{
     render(){
@@ -26,6 +27,7 @@ export default class App extends React.Component{
                     <Route path='/' element={<HomeBody/>}/>
                     <Route path='/Products' element={<ProductWraper/>}>
                         <Route path='/Products' element={<Products/>} />
+                        <Route path='/Products/:idProducto' element={<Product/>} />
                         <Route path='/Products/Create' element={<ProductCreate/>} />
                     </Route>
                     <Route path='/About' element={<About/>}/>
