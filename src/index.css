@@ -20,3 +20,11 @@ code {
 .bodyClass{
   background-color: orange;
 }
+.headerLogin{
+  margin-top: 30px;
+}
+.loginform{
+  text-align: center;
+  width: 50%;
+  padding: 10px;
+}

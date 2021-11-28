@@ -7,10 +7,18 @@ import ProductWraper from "./Routes/Products/ProductWraper";
 import Products from "./Routes/Products/Products";
 import ProductCreate from "./Routes/Products/ProductCreate";
 import Product from "./Routes/Products/Product";
+import Login from "./Routes/Products/Login/Login";
 
 export default class App extends React.Component{
-    render(){
-        return(
+    constructor(props){
+        super(props);
+        this.state= {
+            logged: false,
+            username: "",
+        };
+    }
+    renderApp(){
+        return( 
             <div className='header'>
             <nav>
                 <ul>
@@ -36,6 +44,22 @@ export default class App extends React.Component{
                 
             </div>
             </div>
-        )
+        );
+    }
+    renderLogin(){
+        return (
+            <div className='headerLogin'>
+                <div className='bodyClass'>
+                    <Login />
+                </div>
+                </div>
+        );
+    }
+    render(){
+      if(this.state.logged){
+        return this.renderApp();
+      }else{
+          return this.renderLogin();
+      }
     }
 }
