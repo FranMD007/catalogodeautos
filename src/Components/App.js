@@ -15,9 +15,13 @@ export default class App extends React.Component{
     constructor(props){
         super(props);
         this.state= {
-            logged: true,
+            logged: false,
             username: "",
         };
+        this.updateLoginStatus = this.updateLoginStatus.bind(this);
+    }
+    updateLoginStatus(logged, username){
+        alert("ajjajaj")
     }
     renderApp(){
         return( 
@@ -49,7 +53,7 @@ export default class App extends React.Component{
             <div className='headerLogin'>
                 <Header/>
                 <div className='bodyClass'>
-                    <Login />
+                    <Login functionToUpdateLoginState = {this.updateLoginStatus} />
                 </div>
                 <Footer />
             </div>
