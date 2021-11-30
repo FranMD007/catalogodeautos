@@ -80,5 +80,23 @@ let db={
         location:"sinnoh-route-206-area",
     },
 }
+let users = [
+    {
+        id_user: 101,
+        username: "abcd",
+        password: "root",
+    },
+    {
+        id_user: 202,
+        username: "wxyz",
+        password: "root",
+    },
+    {
+        id_user: 303,
+        username: "haha",
+        password: "root",
+    }
+]
 
 module.exports.db=db;
+module.exports.users = users;
