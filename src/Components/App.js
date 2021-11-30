@@ -10,22 +10,30 @@ import Products from "./Routes/Products/Products";
 import ProductCreate from "./Routes/Products/ProductCreate";
 import Product from "./Routes/Products/Product";
 import Login from "./Routes/Login/Login";
+import Cookies from "universal-cookie/es6;"
 
 export default class App extends React.Component{
     constructor(props){
         super(props);
+        let token = this.CookiesManager.get("loginToken");
         this.state= {
-            logged: false,
+            logged: token != null,
             username: "",
         };
+        this.CookiesManager = new Cookies();
         this.updateLoginStatus = this.updateLoginStatus.bind(this);
     }
     async updateLoginStatus(log, usuname){
         await this.setState({
             logged: log,
-            username: usuname,
+            username: usuname
         });
-        console.log(this.state)
+        if(log){
+            this.CookiesManager.set('loginToken', '', {
+                path: '/',
+                maxAge: 10* 1000,
+            });
+        }
     }
     renderApp(){
         return( 
