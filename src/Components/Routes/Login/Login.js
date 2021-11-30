@@ -87,7 +87,7 @@ export default class Login extends Component {
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
                                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                                     </div>
-                                    <input type="button" class="btn btn-primary" value="Login" onClick = {this.handleLoginClick} />
+                                    <input type="button" class="btn btn-primary" value="Login" aria-label="Close" data-bs-dismiss="modal" onClick = {this.handleLoginClick} />
                                 </form>
                             </div>
                             <div class="modal-footer">
