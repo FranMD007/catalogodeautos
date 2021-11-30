@@ -10,7 +10,7 @@ import Products from "./Routes/Products/Products";
 import ProductCreate from "./Routes/Products/ProductCreate";
 import Product from "./Routes/Products/Product";
 import Login from "./Routes/Login/Login";
-import Cookies from "universal-cookie/es6;"
+import Cookies from "universal-cookie/es6";
 
 export default class App extends React.Component{
     constructor(props){
