@@ -30,12 +30,20 @@ export default class Login extends Component {
                 break;
             }
         }
+        //Sacar aviso 
+        if(isValid){
+            alert("Login exitoso");
+        }else{
+            alert("Hay algun error con el usuario y/o contraseña.");
+        }
+    
         //Actualizar el estado de la app
-        this.functionToUpdateLoginState(isValid, username); 
+        this.props.functionToUpdateLoginState(isValid,username);
+        
     }
 
     async handleChange(e){
-        if(e.target.name == "username"){
+        if(e.target.name === "username"){
             await this.setState({
                 usuario: e.target.value
             });

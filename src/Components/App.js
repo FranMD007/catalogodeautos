@@ -20,8 +20,12 @@ export default class App extends React.Component{
         };
         this.updateLoginStatus = this.updateLoginStatus.bind(this);
     }
-    updateLoginStatus(logged, username){
-        alert("ajjajaj")
+    async updateLoginStatus(log, usuname){
+        await this.setState({
+            logged: log,
+            username: usuname,
+        });
+        console.log(this.state)
     }
     renderApp(){
         return( 
