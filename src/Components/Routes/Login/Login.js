@@ -12,6 +12,11 @@ export default class Login extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleLoginClick = this.handleLoginClick.bind(this);
     }
+    uuidv4() {
+        return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+          (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+        );
+      }
     handleLoginClick(){
         if(this.state.usuario.length < 4){
             alert("El nombre de usuario debe tener al menos 4 caracteres");
@@ -31,16 +36,16 @@ export default class Login extends Component {
                 break;
             }
         }
+        let token = '';
         //Sacar aviso 
         if(isValid){
             alert("Login exitoso");
+            token = this.uuidv4();
         }else{
             alert("Hay algun error con el usuario y/o contraseña.");
         }
-    
-        //Actualizar el estado de la app
-        this.props.functionToUpdateLoginState(isValid,username);
-        
+    //Actualizar el estado de la app
+    this.props.functionToUpdateLoginState(isValid,username,token);    
     }
 
     async handleChange(e){

@@ -10,28 +10,39 @@ import Products from "./Routes/Products/Products";
 import ProductCreate from "./Routes/Products/ProductCreate";
 import Product from "./Routes/Products/Product";
 import Login from "./Routes/Login/Login";
-import Cookies from "universal-cookie/es6;"
+import Cookies from "universal-cookie/es6";
 
 export default class App extends React.Component{
     constructor(props){
         super(props);
+        this.CookiesManager = new Cookies();
         let token = this.CookiesManager.get("loginToken");
+        let logged = false;
+        if(token && token != null){
+            logged = true;
+        }
         this.state= {
-            logged: token != null,
+            logged: logged,
             username: "",
         };
-        this.CookiesManager = new Cookies();
         this.updateLoginStatus = this.updateLoginStatus.bind(this);
+        this.checkStateAndCookies = this.checkStateAndCookies.bind(this);
     }
-    async updateLoginStatus(log, usuname){
+    checkStateAndCookies(){
+        console.log(this.state);
+        console.log(this.CookiesManager.getAll());
+    }
+
+
+    async updateLoginStatus(log, usuname, token){
         await this.setState({
             logged: log,
             username: usuname
         });
         if(log){
-            this.CookiesManager.set('loginToken', '', {
+            this.CookiesManager.set('loginToken', token, {
                 path: '/',
-                maxAge: 10* 1000,
+                maxAge: 10,
             });
         }
     }
@@ -52,7 +63,12 @@ export default class App extends React.Component{
                         </Route>
                         <Route path='/About' element={<About/>}/>
                         <Route path='*' element={<NotFound/>}/>
-                    </Routes>     
+                    </Routes>
+                    <input 
+                        type = "button" 
+                        value="Check CS" 
+                        onClick = {this.checkStateAndCookies}
+                    />     
                 </div>
 
                 <Footer />
@@ -66,6 +82,11 @@ export default class App extends React.Component{
                 <Header/>
                 <div className='bodyClass'>
                     <Login functionToUpdateLoginState = {this.updateLoginStatus} />
+                    <input 
+                        type = "button" 
+                        value="Check CS" 
+                        onClick = {this.checkStateAndCookies}
+                    />
                 </div>
                 <Footer />
             </div>
