@@ -23,6 +23,9 @@ export default class Header extends React.Component{
                             <li class="nav-item" >
                                 <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">&#128516;</button>
                             </li>
+                            <li class="nav-item" >
+                                <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">&#128540;</button>
+                            </li>
                         </ul>
                     </div>
                 </nav>
