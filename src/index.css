@@ -18,7 +18,7 @@ code {
 }
 
 .bodyClass{
-  background-color: orange;
+  background-color:  bg-info;
 }
 
 .loginform{
@@ -27,4 +27,17 @@ code {
   text-align: center;
   width: 100%;
   padding: 10px;
+}
+
+@supports(object-fit: cover){
+  .carrusel{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
