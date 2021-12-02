@@ -28,7 +28,13 @@ export default class App extends React.Component{
         this.updateLoginStatus = this.updateLoginStatus.bind(this);
         this.checkStateAndCookies = this.checkStateAndCookies.bind(this);
         this.logOut = this.logOut.bind(this);
+        this.isLogged=this.isLogged.bind(this);
     }
+
+    isLogged() {
+        return this.state.logged;
+      }
+
     logOut(){
         try{
             this.setState({
@@ -46,7 +52,6 @@ export default class App extends React.Component{
         console.log(this.CookiesManager.getAll());
     }
 
-
     async updateLoginStatus(log, usuname, token){
         await this.setState({
             logged: log,
@@ -63,7 +68,7 @@ export default class App extends React.Component{
         return( 
             <div className='header'>
 
-                <Header/>
+                <Header LogOutFunction={this.logOut} getCookie={this.isLogged}/>
                 <Login />
 
                 <div className='bodyClass'>
@@ -95,7 +100,8 @@ export default class App extends React.Component{
     renderLogin(){
         return (
             <div className='headerLogin'>
-                <Header/>
+                <Header LogOutFunction={this.logOut} getCookie={this.isLogged}/>
+
                 <div className='bodyClass'>
                     <Login functionToUpdateLoginState = {this.updateLoginStatus} />
                     <input 
