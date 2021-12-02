@@ -2,7 +2,7 @@ let db={
     137:{
         productId:137,
         productName:'Porygon',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png",
         rating:1,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/137.png",
         location:"veilstone-city-area",
@@ -10,7 +10,7 @@ let db={
     142:{
         productId:142,
         productName:'Aerodactyl',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png",
         rating:5,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png",
         location:"unknown",
@@ -18,7 +18,7 @@ let db={
     151:{
         productId:151,
         productName:'Mew',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png",
         rating:5,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
         location:"unknown",
@@ -26,15 +26,15 @@ let db={
     53:{
         productId:53,
         productName:'Persian',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png",
         rating:2,
-        shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/53.png",
+        shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/053.png",
         location:"kanto-route-7-area",
     },
     99:{
         productId:99,
         productName:'Kingler',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/099.png",
         rating:3,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/99.png",
         location:"cherrygrove-city-area",
@@ -42,7 +42,7 @@ let db={
     57:{
         productId:57,
         productName:'Primeape',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/057.png",
         rating:2,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/57.png",
         location:"sinnoh-route-225-area",
@@ -50,7 +50,7 @@ let db={
     143:{
         productId:143,
         productName:'Snorlax',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
         rating:4,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png",
         location:"kanto-route-12-area",
@@ -58,7 +58,7 @@ let db={
     93:{
         productId:93,
         productName:'Haunter',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png",
         rating:5,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/93.png",
         location:"turnback-cave-pillar-1",
@@ -66,7 +66,7 @@ let db={
     76:{
         productId:76,
         productName:'Golem',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png",
         rating:1,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/76.png",
         location:"unknown",
@@ -74,7 +74,7 @@ let db={
     77:{
         productId:77,
         productName:'Ponyta',
-        productImage:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+        productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png",
         rating:3,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/77.png",
         location:"sinnoh-route-206-area",

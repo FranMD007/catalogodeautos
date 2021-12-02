@@ -6,7 +6,7 @@ export default class Header extends React.Component{
         return(
             <nav class="navbar navbar-light bg-light"> 
                     <div class="container">
-                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png" alt="" width="75" height="75"/>
+                        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png" alt="" width="75" height="75"/>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <Link to='/' class="nav-link active" aria-current="page" href="#">Home</Link>
@@ -21,10 +21,10 @@ export default class Header extends React.Component{
                                 <Link to='/About' class="nav-link" href="#">About</Link>
                             </li>
                             <li class="nav-item" >
-                                <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">&#128516;</button>
+                                <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Iniciar Sesión &#128516;</button>
                             </li>
                             <li class="nav-item" >
-                                <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">&#128540;</button>
+                                <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Cerrar Sesión &#128540;</button>
                             </li>
                         </ul>
                     </div>
