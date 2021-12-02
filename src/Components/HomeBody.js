@@ -7,7 +7,7 @@ export default class HomeBody extends React.Component{
     render(){
         return(
             <div>
-                <div class='container center'>
+                <div class="row justify-content-center">
                 <Carrusel/>
                 </div>
                 <div class='row'>

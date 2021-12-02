@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 
+
 export default class Header extends React.Component{
     render(){
         return(
@@ -24,7 +25,7 @@ export default class Header extends React.Component{
                                 <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"> Iniciar Sesión &#128516;</button>
                             </li>
                             <li class="nav-item" >
-                                <button type="button" class="btn btn-primary nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Cerrar Sesión &#128540;</button>
+                                <input type="button" class="btn btn-primary nav-link" value = "Cerrar Sesión &#128540;" onClick = {this.logOut}/>
                             </li>
                         </ul>
                     </div>

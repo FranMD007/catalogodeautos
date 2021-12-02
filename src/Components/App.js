@@ -27,6 +27,19 @@ export default class App extends React.Component{
         };
         this.updateLoginStatus = this.updateLoginStatus.bind(this);
         this.checkStateAndCookies = this.checkStateAndCookies.bind(this);
+        this.logOut = this.logOut.bind(this);
+    }
+    logOut(){
+        try{
+            this.setState({
+                logged: false,
+            });
+            this.CookiesManager.remove('loginToken', {
+                path: "/",
+            }); 
+        }catch(ex){
+            console.log(ex);
+        } 
     }
     checkStateAndCookies(){
         console.log(this.state);
@@ -42,7 +55,7 @@ export default class App extends React.Component{
         if(log){
             this.CookiesManager.set('loginToken', token, {
                 path: '/',
-                maxAge: 10,
+                maxAge: 8*60*60,
             });
         }
     }
@@ -69,6 +82,9 @@ export default class App extends React.Component{
                         value="Check CS" 
                         onClick = {this.checkStateAndCookies}
                     />     
+                </div>
+                <div class="nav-item" >
+                    <input type="button" class="btn btn-primary nav-link" value = "Cerrar Sesión &#128540;" onClick = {this.logOut}/>
                 </div>
 
                 <Footer />
