@@ -28,7 +28,7 @@ let db={
         productName:'Persian',
         productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png",
         rating:2,
-        shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/053.png",
+        shiny:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png",
         location:"kanto-route-7-area",
     },
     99:{

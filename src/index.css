@@ -42,3 +42,8 @@ code {
     object-position: center center;
   }
 }
+
+.footer{
+  background-color: black;
+  padding: 2mm;
+}

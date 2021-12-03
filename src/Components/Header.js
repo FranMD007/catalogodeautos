@@ -8,25 +8,64 @@ export default class Header extends React.Component {
     this.CookiesManager = new Cookies();
     //this.isLogged = this.isLogged.bind(this);
     this.generateCreateButton = this.generateCreateButton.bind(this);
+    this.generateLogOutButton=this.generateLogOutButton.bind(this);
+    this.generateLoginButton=this.generateLoginButton.bind(this);
   }
 
-
   generateCreateButton() {
-      console.log(this.props.getCookie())
+    console.log(this.props.getCookie());
     if (this.props.getCookie()) {
       return (
         <li class="nav-item">
           <Link to="/Products/Create" class="nav-link" href="#">
             Create Products
           </Link>
+          
         </li>
       );
-    }
-    else{
-        return null;
+    } else {
+      return null;
     }
   }
-  
+
+  generateLogOutButton(){
+    if(this.props.getCookie()){
+      return(
+        <li class="nav-item">
+              <input
+                type="button"
+                class="btn btn-primary nav-link"
+                value="Cerrar Sesión &#128540;"
+                onClick={this.props.LogOutFunction}
+              />
+            </li>
+      );
+    }
+    else {
+      return null;
+    }
+  }
+
+  generateLoginButton(){
+    if(!(this.props.getCookie())){
+      return(
+        <li class="nav-item">
+        <button
+          type="button"
+          class="btn btn-primary nav-link"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          {" "}
+          Iniciar Sesión &#128516;
+        </button>
+      </li>
+      );
+    }
+    else {
+      return null;
+    }
+  }
 
   render() {
     return (
@@ -56,25 +95,8 @@ export default class Header extends React.Component {
                 About
               </Link>
             </li>
-            <li class="nav-item">
-              <button
-                type="button"
-                class="btn btn-primary nav-link"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                {" "}
-                Iniciar Sesión &#128516;
-              </button>
-            </li>
-            <li class="nav-item">
-              <input
-                type="button"
-                class="btn btn-primary nav-link"
-                value="Cerrar Sesión &#128540;"
-                onClick={this.props.LogOutFunction}
-              />
-            </li>
+            {this.generateLoginButton()}
+            {this.generateLogOutButton()}
           </ul>
         </div>
       </nav>

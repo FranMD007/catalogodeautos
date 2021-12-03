@@ -103,7 +103,20 @@ export default class App extends React.Component{
                 <Header LogOutFunction={this.logOut} getCookie={this.isLogged}/>
 
                 <div className='bodyClass'>
+                    <Routes>
+                        <Route path='/' element={<HomeBody/>}/>
+                        <Route path='/Products' element={<ProductWraper/>}>
+                            <Route path='/Products' element={<Products/>} />
+                            <Route path='/Products/:idProducto' element={<Product/>} />
+                        </Route>
+                        <Route path='/About' element={<About/>}/>
+                        <Route path='*' element={<NotFound/>}/>
+                    </Routes>
+                </div>
+
+                <div className='bodyClass'>
                     <Login functionToUpdateLoginState = {this.updateLoginStatus} />
+
                     <input 
                         type = "button" 
                         value="Check CS" 
