@@ -11,8 +11,8 @@ export default class HomeBody extends React.Component{
                 <Carrusel/>
                 </div>
                 <div class='row'>
-                    <div class='col-2'><Barrafiltro/></div>
-                    <div class='col-10'><Products/></div>
+                    <div class='col-3'><Barrafiltro/></div>
+                    <div class='col-9'><Products/></div>
                 </div>
             </div>
         );

@@ -88,10 +88,7 @@ export default class App extends React.Component{
                         onClick = {this.checkStateAndCookies}
                     />     
                 </div>
-                <div class="nav-item" >
-                    <input type="button" class="btn btn-primary nav-link" value = "Cerrar Sesión &#128540;" onClick = {this.logOut}/>
-                </div>
-
+                
                 <Footer />
 
             </div>

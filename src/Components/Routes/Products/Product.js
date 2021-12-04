@@ -9,7 +9,7 @@ export default function Product() {
             try{
                 return  (
                     <div className='containerProducts'>
-                        <div className='productElement'>
+                        <div className='productElement'>                        
                             <h3>{db[idProducto].productName}</h3>
                                 <img src={db[idProducto].productImage} alt={db[idProducto].productName} className='productImage'/>
                                 <img src={db[idProducto].shiny} alt={db[idProducto].productName} className='productImage'/>
