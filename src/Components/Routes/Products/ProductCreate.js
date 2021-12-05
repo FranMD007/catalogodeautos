@@ -52,7 +52,7 @@ export default class ProductCreate extends React.Component {
                   } else {
                     if (e.target.name === "imagen") {
                       alert("Si esta leyendo algo");
-                      console.log(e.target.result);
+                      console.log(e.target.value);
                       this.setState({ Imagen: e.target.files });
                     }
                   }
@@ -189,7 +189,7 @@ export default class ProductCreate extends React.Component {
                   </label>
                   <datalist id="Listadecombustible">
                     <option value="Gasolina" />
-                    <option value="Díesel" />
+                    <option value="Diesel" />
                     <option value="Híbrido" />
                     <option value="Eléctrico" />
                     <option value="Gas-Gasolina" />

@@ -111,14 +111,10 @@ export default class App extends React.Component{
                     </Routes>
                 </div>
 
-                <div className='bodyClass'>
+                <div className='Loginclass'>
                     <Login functionToUpdateLoginState = {this.updateLoginStatus} />
 
-                    <input 
-                        type = "button" 
-                        value="Check CS" 
-                        onClick = {this.checkStateAndCookies}
-                    />
+                  
                 </div>
                 <Footer />
             </div>

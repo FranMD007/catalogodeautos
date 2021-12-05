@@ -6,9 +6,36 @@ export default class Barrafiltro extends React.Component{
             <div className="barrafiltro">
                 <div>
                     <ul class="dropdown-header">Marcas
-                            <li class="dropdown-item"> BMW 
-                            <img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/034.png' alt='BMW' width='30' height='30'/>
-                            </li>                
+                            <li class="dropdown-item"> BMW  
+                            <img src='Bmw.png' width='30' height='30' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Bugatti
+                            <img src='Bugatti.png' width='50' height='25' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Chevrolet
+                            <img src='Chevrolet.png' width='40' height='15' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Ferrari
+                            <img src='Ferrari.png' width='23' height='30' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Ford
+                            <img src='ford.png' width='50' height='22' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Jeep
+                            <img src='Jeep.png' width='50' height='19' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Lamborghini
+                            <img src='Lamborghini.png' width='30' height='30' alt='' />
+                            </li>                       
+                            <li class="dropdown-item"> Porsche
+                            <img src='Porsche.png' width='22' height='30' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Toyota
+                            <img src='Toyota.png' width='30' height='20' alt='' />
+                            </li>
+                            <li class="dropdown-item"> Volkswagen
+                            <img src='Volkswagen.png' width='30' height='30' alt='' />
+                            </li> 
                     </ul>
                 </div>
                 <div>

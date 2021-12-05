@@ -15,10 +15,12 @@ code {
 .header{
   /*display: inline-flex;*/
   text-align: center;
+  min-height: calc(10vh);
 }
 
 .bodyClass{
   background-color: lightseagreen;
+  min-height: calc(100vh - 18vh);
 }
 
 .loginform{
@@ -46,4 +48,16 @@ code {
 .footer{
   background-color: black;
   padding: 2mm;
+  min-height: calc(5vh);
+}
+.dropdown-header{
+  font-weight: 900;
+  
+}
+
+.mvt {
+  font-family: "Sofia", sans-serif;
+}
+.mv {
+  font-family: "Sofia", sans-serif;
 }
