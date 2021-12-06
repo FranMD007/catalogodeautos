@@ -53,6 +53,7 @@ code {
 
 .dropdown-header{
   font-weight: 900;
+  color: gold;
 }
 
 .mvt {
@@ -60,4 +61,11 @@ code {
 }
 .mv {
   font-family: "Sofia", sans-serif;
+}
+.Brand{
+  font-family: "Sofia", sans-serif;
+}
+.dropdown-item{
+  font-weight: 700;
+  color: midnightblue;
 }

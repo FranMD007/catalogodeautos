@@ -3,7 +3,7 @@ let db={
         productId:137,
         productName:'Porygon',
         productImage:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png",
-        rating:1,
+        rating:5,
         shiny:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/137.png",
         location:"veilstone-city-area",
     },

@@ -70,12 +70,17 @@ export default class Header extends React.Component {
     return (
       <nav class="navbar navbar-light bg-light">
         <div class="container">
+          <div>
+            <span>
           <img
             src="https://www.pikpng.com/pngl/b/375-3752649_car-icon-cartoon-carros-todo-terreno-animados-clipart.png"
             alt=""
             width="75"
             height="75"
           />
+          </span>
+          <span className='Brand'>MyCarApp</span>
+          </div>
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <Link to="/" class="nav-link active" aria-current="page" href="#">

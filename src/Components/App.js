@@ -82,11 +82,7 @@ export default class App extends React.Component{
                         <Route path='/About' element={<About/>}/>
                         <Route path='*' element={<NotFound/>}/>
                     </Routes>
-                    <input 
-                        type = "button" 
-                        value="Check CS" 
-                        onClick = {this.checkStateAndCookies}
-                    />     
+
                 </div>
                 
                 <Footer />

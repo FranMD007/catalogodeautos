@@ -75,27 +75,35 @@ export default class ProductCreate extends React.Component {
       <div>
         <div class="container">
           <div class="row">
-            <div class="col-4">
-              <div className='containerProducts'>
-              <div class="card text-center border-dark">
-                <div class="card-header bg-danger">
-                  <h4>{this.state.Marca}</h4>
-                  <br/>
-                  <h5>{this.state.Linea}</h5>
+            <div class="col-sm-4">
+              <div className="containerProducts">
+                <div class="card text-center border-dark">
+                  <div class="card-header bg-danger">
+                    <h4>{this.state.Marca}</h4>
+                    <br />
+                    <h5>{this.state.Linea}</h5>
+                  </div>
+                  <div class="card-body bg-secondary">
+                    <img
+                      src={this.state.Imagen}
+                      alt={this.state.Imagen}
+                      className="productImage"
+                    />
+                  </div>
+                  <div class="card-footer text-light bg-info">
+                    <h5>Precio: ${this.state.Precio}</h5>
+                    <br />
+                    <h5>Modelo: {this.state.Modelo}</h5>
+                  </div>
                 </div>
-                <div class="card-body bg-secondary">
-                  <img src={this.state.Imagen} alt={this.state.Imagen} className="productImage"/>
-                </div>
-                <div class="card-footer text-light bg-info">
-                  <h5>Precio: ${this.state.Precio}</h5>
-                  <br/>
-                  <h5>Modelo: {this.state.Modelo}</h5>
-                </div>
-              </div>
               </div>
             </div>
-            <div class="col-8">
-              <form class="row g-3" encType='multipart/from-data' onSubmit={this.handleSubmit}>
+            <div class="col-sm-8">
+              <form
+                class="row g-3"
+                encType="multipart/from-data"
+                onSubmit={this.handleSubmit}
+              >
                 <div class="col-md-4 form-floating">
                   <input
                     class="form-control"
@@ -295,14 +303,7 @@ export default class ProductCreate extends React.Component {
                       required
                     />
                     <button
-                      class="btn btn-outline-secondary"
-                      type="button"
-                      id="inputGroupFileAddon04"
-                    >
-                      Remover
-                    </button>
-                    <button
-                      class="btn btn-outline-secondary"
+                      class="btn btn-primary"
                       type="submit"
                       id="inputGroupFileAddon04"
                     >
@@ -311,6 +312,12 @@ export default class ProductCreate extends React.Component {
                   </div>
                 </div>
               </form>
+              <br/>
+              <br/>
+              <br/>
+              <button class=" flex flex-wrap btn btn-warning">
+                Crear Tarjeta del Vehículo
+              </button>
             </div>
           </div>
         </div>
