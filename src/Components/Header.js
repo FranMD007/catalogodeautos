@@ -6,7 +6,6 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.CookiesManager = new Cookies();
-    //this.isLogged = this.isLogged.bind(this);
     this.generateCreateButton = this.generateCreateButton.bind(this);
     this.generateLogOutButton=this.generateLogOutButton.bind(this);
     this.generateLoginButton=this.generateLoginButton.bind(this);
@@ -72,7 +71,7 @@ export default class Header extends React.Component {
       <nav class="navbar navbar-light bg-light">
         <div class="container">
           <img
-            src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+            src="https://www.pikpng.com/pngl/b/375-3752649_car-icon-cartoon-carros-todo-terreno-animados-clipart.png"
             alt=""
             width="75"
             height="75"

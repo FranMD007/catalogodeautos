@@ -4,7 +4,7 @@ export default class ProductCreate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Linea:"Línea",
+      Linea: "Línea",
       Marca: "Marca",
       Tipo: "",
       Transmision: "",
@@ -13,13 +13,12 @@ export default class ProductCreate extends React.Component {
       Direccion: "",
       Precio: "0",
       Modelo: "Modelo",
-      Imagen: "",
+      Imagen: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/122.png",
     };
     //Binds
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
 
   handleChange(e) {
     if (e.target.name === "linea") {
@@ -28,32 +27,33 @@ export default class ProductCreate extends React.Component {
       if (e.target.name === "marca") {
         this.setState({ Marca: e.target.value });
       } else {
-      if (e.target.name === "tipo") {
-        this.setState({ Tipo: e.target.value });
-      } else {
-        if (e.target.name === "transmision") {
-          this.setState({ Transmision: e.target.value });
+        if (e.target.name === "tipo") {
+          this.setState({ Tipo: e.target.value });
         } else {
-          if (e.target.name === "combustible") {
-            this.setState({ Combustible: e.target.value });
+          if (e.target.name === "transmision") {
+            this.setState({ Transmision: e.target.value });
           } else {
-            if (e.target.name === "puertas") {
-              this.setState({ Puertas: e.target.value });
+            if (e.target.name === "combustible") {
+              this.setState({ Combustible: e.target.value });
             } else {
-              if (e.target.name === "direccion") {
-                this.setState({ Direccion: e.target.value });
+              if (e.target.name === "puertas") {
+                this.setState({ Puertas: e.target.value });
               } else {
-                if (e.target.name === "precio") {
-                  this.setState({ Precio: e.target.value });
+                if (e.target.name === "direccion") {
+                  this.setState({ Direccion: e.target.value });
                 } else {
-                  if (e.target.name === "modelo") {
-                    console.log(e);
-                    this.setState({ Modelo: e.target.value });
+                  if (e.target.name === "precio") {
+                    this.setState({ Precio: e.target.value });
                   } else {
-                    if (e.target.name === "imagen") {
-                      alert("Si esta leyendo algo");
-                      console.log(e.target.value);
-                      this.setState({ Imagen: e.target.files });
+                    if (e.target.name === "modelo") {
+                      console.log(e);
+                      this.setState({ Modelo: e.target.value });
+                    } else {
+                      if (e.target.name === "imagen") {
+                        alert("Si esta leyendo algo");
+                        console.log(e.target.files);
+                        this.setState({ Imagen: e.target.files });
+                      }
                     }
                   }
                 }
@@ -62,7 +62,6 @@ export default class ProductCreate extends React.Component {
           }
         }
       }
-    }
     }
   }
 
@@ -77,31 +76,34 @@ export default class ProductCreate extends React.Component {
         <div class="container">
           <div class="row">
             <div class="col-4">
+              <div className='containerProducts'>
               <div class="card text-center border-dark">
                 <div class="card-header bg-danger">
                   <h4>{this.state.Marca}</h4>
-                  <bk/>
+                  <br/>
                   <h5>{this.state.Linea}</h5>
                 </div>
                 <div class="card-body bg-secondary">
-                  <img src={this.state.Imagen} alt=''/>
+                  <img src={this.state.Imagen} alt={this.state.Imagen} className="productImage"/>
                 </div>
                 <div class="card-footer text-light bg-info">
                   <h5>Precio: ${this.state.Precio}</h5>
-                  <bk/>
-                  <h5>Modelo: {this.state.Modelo}</h5>                  
+                  <br/>
+                  <h5>Modelo: {this.state.Modelo}</h5>
                 </div>
+              </div>
               </div>
             </div>
             <div class="col-8">
-              <form class="row g-3" onSubmit={this.handleSubmit}>
-              <div class="col-md-4 form-floating">
+              <form class="row g-3" encType='multipart/from-data' onSubmit={this.handleSubmit}>
+                <div class="col-md-4 form-floating">
                   <input
                     class="form-control"
                     list="Listadelinea"
                     name="linea"
                     id="examplelinea"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje la línea del vehículo
@@ -123,6 +125,7 @@ export default class ProductCreate extends React.Component {
                     name="marca"
                     id="examplemarcas"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje la marca de tu veículo
@@ -146,6 +149,7 @@ export default class ProductCreate extends React.Component {
                     name="tipo"
                     id="exampletipos"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje el tipo de vehículo
@@ -167,6 +171,7 @@ export default class ProductCreate extends React.Component {
                     name="transmision"
                     id="exampletransmision"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje el tipo de transmisión
@@ -183,6 +188,7 @@ export default class ProductCreate extends React.Component {
                     name="combustible"
                     id="examplecombustible"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje el tipo de combustible
@@ -202,6 +208,7 @@ export default class ProductCreate extends React.Component {
                     name="puertas"
                     id="examplePuertas"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje la cantidad de puertas
@@ -221,6 +228,7 @@ export default class ProductCreate extends React.Component {
                     name="direccion"
                     id="exampleDireccion"
                     onChange={this.handleChange}
+                    required
                   />
                   <label for="floatingdatalist" class="form-label text-danger">
                     Escoje el tipo de dirección
@@ -248,6 +256,7 @@ export default class ProductCreate extends React.Component {
                         type="number"
                         name="precio"
                         onChange={this.handleChange}
+                        required
                       />
                     </div>
                   </div>
@@ -268,6 +277,7 @@ export default class ProductCreate extends React.Component {
                         type="number"
                         name="modelo"
                         onChange={this.handleChange}
+                        required
                       />
                     </div>
                   </div>
@@ -282,6 +292,7 @@ export default class ProductCreate extends React.Component {
                       aria-label="Upload"
                       name="imagen"
                       onChange={this.handleChange}
+                      required
                     />
                     <button
                       class="btn btn-outline-secondary"
