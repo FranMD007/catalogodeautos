@@ -7,7 +7,8 @@ export default class Products extends React.Component {
   render() {
     return (
       <div className="containerProducts">
-        {Object.entries(db).map(function (v) {
+        {Object.entries(db).map(function(v) {
+          console.log(v)
           return (
             <Link class="text-decoration-none" to={"/Products/" + v[1].productId}>
               <div className="productElement">

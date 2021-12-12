@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { users } from '../../../db';
+import axios from 'axios';
+import React, { Component } from 'react'; 
+import { appHost } from '../../../appConfig'
 
 
 export default class Login extends Component {
@@ -17,7 +18,7 @@ export default class Login extends Component {
           (c ^ crypto.getRandomValues(new Uint8Array(1))[0] && 15 >> c / 4).toString(16)
         );
       }
-    handleLoginClick(){
+    async handleLoginClick(){
         if(this.state.usuario.length < 4){
             alert("El nombre de usuario debe tener al menos 4 caracteres");
             return;
@@ -29,18 +30,17 @@ export default class Login extends Component {
         //Validacion de credenciales
         let isValid = false;
         let username = "";
-        for(let key in users){
-            if(users[key].username === this.state.usuario && users[key].password === this.state.password){
-                isValid = true;
-                username = users[key].username;
-                break;
-            }
-        }
+        let response = await axios.post(appHost + 'login', {
+            username : this.state.usuario,
+            password : this.state.password
+        }); 
+        isValid = response.data.length === 1;
         let token = '';
         //Sacar aviso 
         if(isValid){
             alert("Login exitoso");
             token = this.uuidv4();
+            username = response.data[0].username;
         }else{
             alert("Hay algun error con el usuario y/o contraseña.");
         }
