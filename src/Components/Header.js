@@ -5,6 +5,7 @@ import Cookies from "universal-cookie/es6";
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
+
     this.CookiesManager = new Cookies();
     this.generateCreateButton = this.generateCreateButton.bind(this);
     this.generateLogOutButton=this.generateLogOutButton.bind(this);
@@ -12,11 +13,10 @@ export default class Header extends React.Component {
   }
 
   generateCreateButton() {
-    console.log(this.props.getCookie());
     if (this.props.getCookie()) {
       return (
-        <li class="nav-item">
-          <Link to="/Products/Create" class="nav-link" href="#">
+        <li className="nav-item">
+          <Link to="/Products/Create" className="nav-link" href="#">
             Create Products
           </Link>
           
@@ -30,10 +30,10 @@ export default class Header extends React.Component {
   generateLogOutButton(){
     if(this.props.getCookie()){
       return(
-        <li class="nav-item">
+        <li className="nav-item">
               <input
                 type="button"
-                class="btn btn-primary nav-link"
+                className="btn btn-primary nav-link"
                 value="Cerrar Sesión &#128540;"
                 onClick={this.props.LogOutFunction}
               />
@@ -48,10 +48,10 @@ export default class Header extends React.Component {
   generateLoginButton(){
     if(!(this.props.getCookie())){
       return(
-        <li class="nav-item">
+        <li className="nav-item">
         <button
           type="button"
-          class="btn btn-primary nav-link"
+          className="btn btn-primary nav-link"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
@@ -66,10 +66,11 @@ export default class Header extends React.Component {
     }
   }
 
+
   render() {
     return (
-      <nav class="navbar navbar-light bg-light">
-        <div class="container">
+      <nav className="navbar navbar-light bg-light">
+        <div className="container">
           <div>
             <span>
           <img
@@ -81,21 +82,21 @@ export default class Header extends React.Component {
           </span>
           <span className='Brand'>MyCarApp</span>
           </div>
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <Link to="/" class="nav-link active" aria-current="page" href="#">
+          <ul className="nav nav-tabs">
+            <li className="nav-item">
+              <Link to="/" className='nav-link active' aria-current="page" href="#">
                 Home
               </Link>
             </li>
-            <li class="nav-item">
-              <Link to="/Products" class="nav-link" href="#">
+            <li className="nav-item">
+              <Link to="/Products" className="nav-link" href="#">
                 Products
               </Link>
             </li>
             {this.generateCreateButton()}
 
-            <li class="nav-item">
-              <Link to="/About" class="nav-link" href="#">
+            <li className="nav-item">
+              <Link to="/About" className="nav-link" href="#">
                 About
               </Link>
             </li>

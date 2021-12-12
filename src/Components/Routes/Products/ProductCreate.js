@@ -52,7 +52,7 @@ export default class ProductCreate extends React.Component {
                       if (e.target.name === "imagen") {
                         alert("Si esta leyendo algo");
                         console.log(e.target.files);
-                        this.setState({ Imagen: e.target.files });
+                        this.setState({ Imagen: e.target.files});
                       }
                     }
                   }
