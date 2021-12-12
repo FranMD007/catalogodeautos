@@ -5,6 +5,7 @@ import Cookies from "universal-cookie/es6";
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
+    
 
     this.CookiesManager = new Cookies();
     this.generateCreateButton = this.generateCreateButton.bind(this);
@@ -19,7 +20,6 @@ export default class Header extends React.Component {
           <Link to="/Products/Create" className="nav-link" href="#">
             Create Products
           </Link>
-          
         </li>
       );
     } else {
