@@ -12,6 +12,7 @@ export default class Products extends React.Component {
           return (
             <Link
               className="text-decoration-none"
+              key={v[1].productId}
               to={"/Products/" + v[1].productId}
             >
               <div className="productElement">
