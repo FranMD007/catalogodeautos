@@ -7,23 +7,26 @@ export default class Products extends React.Component {
   render() {
     return (
       <div className="containerProducts">
-        {Object.entries(db).map(function(v) {
-          console.log(v)
+        {Object.entries(db).map(function (v) {
+          console.log(v);
           return (
-            <Link class="text-decoration-none" to={"/Products/" + v[1].productId}>
+            <Link
+              className="text-decoration-none"
+              to={"/Products/" + v[1].productId}
+            >
               <div className="productElement">
-                <div class="card text-center border-dark">
-                  <div class="card-header bg-danger">
-                    <h3 class='text-dark'>{v[1].productName}</h3>
+                <div className="card text-center border-dark">
+                  <div className="card-header bg-danger">
+                    <h3 className="text-dark">{v[1].productName}</h3>
                   </div>
-                  <div class="card-body bg-secondary">
+                  <div className="card-body bg-secondary">
                     <img
                       src={v[1].productImage}
                       alt={v[1].productName}
                       className="productImage"
                     />
                   </div>
-                  <div class="card-footer text-light bg-info">
+                  <div className="card-footer text-light bg-info">
                     <p className="rating">
                       Rating: {Array(v[1].rating).fill(<Estrella />)}
                     </p>

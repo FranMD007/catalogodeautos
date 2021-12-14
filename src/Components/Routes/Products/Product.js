@@ -16,7 +16,7 @@ export default function Product() {
                                 <h5>Área: {db[idProducto].location}</h5>
                                 <p className='rating: '>Rating{Array(db[idProducto].rating).fill(<Estrella/>)}</p>
                                 <Link to='/Products'>
-                                    <button type="button" class="btn btn-outline-danger">Regresar</button>
+                                    <button type="button" className="btn btn-outline-danger">Regresar</button>
                                 </Link>
                         </div>
                     </div>

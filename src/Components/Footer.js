@@ -8,13 +8,13 @@ export default class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <div class="container">
-         <div class="navbar-nav flex-row flex-wrap ms-md-auto">
-            <div class="col text-light d-flex justify-content-start">
+        <div className="container">
+         <div className="navbar-nav flex-row flex-wrap ms-md-auto">
+            <div className="col text-light d-flex justify-content-start">
             <span><img src='https://www.pikpng.com/pngl/b/375-3752649_car-icon-cartoon-carros-todo-terreno-animados-clipart.png' width='40' height='40' alt='' /></span>
             <span className='Brand'>MyCarApp</span>
             </div>
-            <div class="col text-light align-middle">Powered by 
+            <div className="col text-light align-middle">Powered by 
             <img src='Lamborghini.png' width='30' height='30' alt='' />
             <img src='Bugatti.png' width='50' height='24' alt='' />
             <img src='Chevrolet.png' width='40' height='23' alt='' />
@@ -25,16 +25,16 @@ export default class Footer extends React.Component {
             <img src='Ford.png' width='57' height='25' alt='' />
             <img src='Toyota.png' width='40' height='25' alt='' />
             </div>
-            <div class="col justify-content-end">
+            <div className="col justify-content-end">
               <nav>
-                <ul class="pagination justify-content-end">
-                  <button type="button" class="btn btn-outline-info">
+                <ul className="pagination justify-content-end">
+                  <button type="button" className="btn btn-outline-info">
                     <Facebook />
                   </button>
-                  <button type="button" class="btn btn-outline-light">
+                  <button type="button" className="btn btn-outline-light">
                     <WhatsApp />
                   </button>
-                  <button type="button" class="btn btn-outline-danger">
+                  <button type="button" className="btn btn-outline-danger">
                     <Instagram />
                   </button>
                 </ul>

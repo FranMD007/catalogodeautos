@@ -73,24 +73,24 @@ export default class ProductCreate extends React.Component {
   render() {
     return (
       <div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-4">
               <div className="containerProducts">
-                <div class="card text-center border-dark">
-                  <div class="card-header bg-danger">
+                <div className="card text-center border-dark">
+                  <div className="card-header bg-danger">
                     <h4>{this.state.Marca}</h4>
                     <br />
                     <h5>{this.state.Linea}</h5>
                   </div>
-                  <div class="card-body bg-secondary">
+                  <div className="card-body bg-secondary">
                     <img
                       src={this.state.Imagen}
                       alt={this.state.Imagen}
                       className="productImage"
                     />
                   </div>
-                  <div class="card-footer text-light bg-info">
+                  <div className="card-footer text-light bg-info">
                     <h5>Precio: ${this.state.Precio}</h5>
                     <br />
                     <h5>Modelo: {this.state.Modelo}</h5>
@@ -98,15 +98,15 @@ export default class ProductCreate extends React.Component {
                 </div>
               </div>
             </div>
-            <div class="col-sm-8">
+            <div className="col-sm-8">
               <form
-                class="row g-3"
+                className="row g-3"
                 encType="multipart/from-data"
                 onSubmit={this.handleSubmit}
               >
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="Listadelinea"
                     name="linea"
                     id="examplelinea"
@@ -126,9 +126,9 @@ export default class ProductCreate extends React.Component {
                     <option value="Twingo" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="Listademarcas"
                     name="marca"
                     id="examplemarcas"
@@ -150,9 +150,9 @@ export default class ProductCreate extends React.Component {
                     <option value="Renault" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="Listadetipos"
                     name="tipo"
                     id="exampletipos"
@@ -172,9 +172,9 @@ export default class ProductCreate extends React.Component {
                     <option value="Estacas" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="Listadetransmision"
                     name="transmision"
                     id="exampletransmision"
@@ -189,9 +189,9 @@ export default class ProductCreate extends React.Component {
                     <option value="Automática" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="Listadecombustible"
                     name="combustible"
                     id="examplecombustible"
@@ -209,9 +209,9 @@ export default class ProductCreate extends React.Component {
                     <option value="Gas-Gasolina" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="Listadepuertas"
                     name="puertas"
                     id="examplePuertas"
@@ -229,9 +229,9 @@ export default class ProductCreate extends React.Component {
                     <option value="6" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
+                <div className="col-md-4 form-floating">
                   <input
-                    class="form-control"
+                    className="form-control"
                     list="ListadeDireccion"
                     name="direccion"
                     id="exampleDireccion"
@@ -248,17 +248,17 @@ export default class ProductCreate extends React.Component {
                     <option value="Hidráulica" />
                   </datalist>
                 </div>
-                <div class="col-md-4 form-floating">
-                  <div class="form-floating">
-                    <label for="floatingInput" Class="text-warning">
+                <div className="col-md-4 form-floating">
+                  <div className="form-floating">
+                    <label for="floatingInput" ClassName="text-warning">
                       Precio
                     </label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend">
+                    <div className="input-group">
+                      <span className="input-group-text" id="inputGroupPrepend">
                         $
                       </span>
                       <input
-                        class="form-control"
+                        className="form-control"
                         placeholder="precio"
                         id="floatingInput"
                         type="number"
@@ -269,17 +269,17 @@ export default class ProductCreate extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 form-floating">
-                  <div class="form-floating">
-                    <label for="floatingInput" Class="text-warning">
+                <div className="col-md-4 form-floating">
+                  <div className="form-floating">
+                    <label for="floatingInput" ClassName="text-warning">
                       Modelo
                     </label>
-                    <div class="input-group">
-                      <span class="input-group-text" id="inputGroupPrepend">
+                    <div className="input-group">
+                      <span className="input-group-text" id="inputGroupPrepend">
                         Año
                       </span>
                       <input
-                        class="form-control"
+                        className="form-control"
                         placeholder="Modelo del vehículo"
                         id="floatingInput"
                         type="number"
@@ -290,11 +290,11 @@ export default class ProductCreate extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div class="col-12">
-                  <div class="input-group">
+                <div className="col-12">
+                  <div className="input-group">
                     <input
                       type="file"
-                      class="form-control"
+                      className="form-control"
                       id="inputGroupFile04"
                       aria-describedby="inputGroupFileAddon04"
                       aria-label="Upload"
@@ -303,7 +303,7 @@ export default class ProductCreate extends React.Component {
                       required
                     />
                     <button
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       type="submit"
                       id="inputGroupFileAddon04"
                     >
@@ -315,7 +315,7 @@ export default class ProductCreate extends React.Component {
               <br/>
               <br/>
               <br/>
-              <button class=" flex flex-wrap btn btn-warning">
+              <button className=" flex flex-wrap btn btn-warning">
                 Crear Tarjeta del Vehículo
               </button>
             </div>

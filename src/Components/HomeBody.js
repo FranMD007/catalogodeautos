@@ -7,12 +7,12 @@ export default class HomeBody extends React.Component{
     render(){
         return(
             <div>
-                <div class="row justify-content-center">
+                <div className="row justify-content-center">
                 <Carrusel/>
                 </div>
-                <div class='row'>
-                    <div class='col-2'><Barrafiltro/></div>
-                    <div class='col-10'><Products/></div>
+                <div className='row'>
+                    <div className='col-2'><Barrafiltro/></div>
+                    <div className='col-10'><Products/></div>
                 </div>
             </div>
         );
